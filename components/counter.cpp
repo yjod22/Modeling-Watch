@@ -33,22 +33,3 @@ sc_uint<8> Counter::read_mod()
 {
 	return modulus;
 }
-
-class Counter : public Register 
-{
-	private:
-		// data members (attributes)
-		sc_uint<8> modulus;
-		bool overflow_flag;
-
-	public:
-		// member functions (methods)
-		Counter(sc_uint<8> mod)
-		{
-			modulus = mod;
-			overflow_flag = false; 
-			state=0;
-		}
-};
-
-#endif
